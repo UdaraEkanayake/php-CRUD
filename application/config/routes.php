@@ -54,3 +54,15 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['about'] = 'Welcome/demo';
+
+$route['home'] = 'PageController/index'; 
+$route['about'] = 'PageController/aboutUs';
+
+//$route['blog/(:any)'] = 'PageController/blog/$1';
+
+$route['blog/(:num)'] = 'PageController/blog/$1';
+
+// employee routes
+$route['employee'] = 'Frontend/EmployeeController/index';
+$route['employee/add'] = 'Frontend/EmployeeController/create';
+$route['employee/store'] = 'Frontend/EmployeeController/store';
