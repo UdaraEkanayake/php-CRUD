@@ -8,9 +8,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
             
             // get the table data
             $this->load->model('EmployeeModel','emp');
-            $data['employee'] = $this->emp->getEmployee();
+            //$data['employee'] = $this->emp->getEmployee();
             // $data parse into the employee.php
-            $this->load->view('frontend/employee', $data);
+            //$this->load->view('frontend/employee', $data);
+
+            $employee = $this->emp->getEmployee();
+            $this->load->view('frontend/employee', ['employee'=>$employee]);
+
             $this->load->view('template/footer');
           }  
 
@@ -45,6 +49,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
             //var_dump($data);
+          }
+
+          public function edit($id){
+            $this->load->view('template/header');
+            $this->load->model('EmployeeModel','emp');
+            //parse employee data 
+            $data['employee'] = $this->emp->editEmployee($id);
+            
+            // push $data to the edit view (fetching the data)
+            $this->load->view('frontend/edit', $data);
+            $this->load->view('template/footer');
+
           }
 
     }

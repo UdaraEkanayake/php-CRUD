@@ -66,3 +66,4 @@ $route['blog/(:num)'] = 'PageController/blog/$1';
 $route['employee'] = 'Frontend/EmployeeController/index';
 $route['employee/add'] = 'Frontend/EmployeeController/create';
 $route['employee/store'] = 'Frontend/EmployeeController/store';
+$route['employee/edit/(:any)'] = 'Frontend/EmployeeController/edit/$1';
