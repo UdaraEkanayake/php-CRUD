@@ -1,5 +1,5 @@
 
-<div class="comntainer">
+<div class="container">
         <div class="row">
             <div class="col-md-12 mt-4">
                 <div class="card">
@@ -37,6 +37,22 @@
                                 <!-- form error -->
                                 <small><?php echo form_error('email'); ?></small>
                             </div>
+
+                            <div class="form-group">
+                                <label for="">Designation</label>
+                                
+                               <select class="form-select" id="desId" name="desId">
+                                     <option value="">select</option>
+                                    <?php 
+                                        foreach($designation as $des){
+                                            echo '<option value="'.$des->id.'">'.$des->des_name.'</option>';
+                                        }
+                                    ?>
+                               </select>
+                               
+                            </div>
+
+                            
 
                             <div class="form-group">
                                <button type="submit" class="btn btn-primary">Save</button>

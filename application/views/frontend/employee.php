@@ -1,4 +1,4 @@
-    <div class="comntainer">
+    <div class="container">
         <div class="row">
             <div class="col-md-12 mt-4">
                 <div class="card">
@@ -18,12 +18,14 @@
                                     <th>Email ID</th>
                                     <th>Edit</th>
                                     <th>Delete</th>
+                                    <!-- <th>Confirm Delete</th> -->
                                 </tr>
                             </thead>
                             <tbody>
                                    <?php foreach ($employee as $row) : ?>
 
                                    <tr>
+                                    <!-- fetch the id from db employee table -->
                                    <td><?= $row->id; ?></td>
                                    <td><?php echo $row->first_name; ?></td>
                                    <td><?php echo $row->last_name; ?></td>
@@ -33,8 +35,11 @@
                                         <a href="<?php echo base_url('employee/edit/'.$row->id) ?>" class="btn btn-success btm-sm">Edit</a>
                                    </td>
                                    <td>
-                                        <a href="" class="btn btn-danger btm-sm">Delete</a>
+                                        <a href="<?php echo base_url('employee/delete/'.$row->id) ?>" class="btn btn-danger btm-sm">Delete</a>
                                    </td>
+                                   <!-- <td>
+                                        <button type="button" class="btn btn-danger confirm-deletee" value="<?= $row->id; ?>">Confirm Delete</button>
+                                   </td> -->
                                    </tr>
                                    <?php endforeach; ?>
                             </tbody>
@@ -46,4 +51,3 @@
     </div>
 
     
-  
