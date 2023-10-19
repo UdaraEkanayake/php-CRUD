@@ -40,6 +40,13 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="">Address</label>
+                                <input type="text" name="address" value="<?= $employee->address ?>" class="form-control">
+                                <!-- form error -->
+                                <small><?php echo form_error('address'); ?></small>
+                            </div>
+
+                            <div class="form-group">
                             <label for="">Designation</label>
                             <select class="form-select" id="desId" name="desId">
                                 <option value="">select</option>

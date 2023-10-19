@@ -16,6 +16,7 @@
                                     <th>Last Name</th>
                                     <th>Phone no</th>
                                     <th>Email ID</th>
+                                    <th>Adress</th>
                                     <th>Edit</th>
                                     <th>Delete</th>
                                     <!-- <th>Confirm Delete</th> -->
@@ -31,6 +32,7 @@
                                    <td><?php echo $row->last_name; ?></td>
                                    <td><?php echo $row->phone; ?></td>
                                    <td><?php echo $row->email; ?></td>
+                                   <td>><?php echo $row->address; ?></td>
                                    <td>
                                         <a href="<?php echo base_url('employee/edit/'.$row->id) ?>" class="btn btn-success btm-sm">Edit</a>
                                    </td>

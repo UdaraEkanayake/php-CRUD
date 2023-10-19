@@ -24,6 +24,12 @@
             //<input type="text" name="first_name" value="<?= $employee=['first_name'] 
         }
 
+        public function getAdress(){
+            $this->db->get('employee');
+        }
+
+
+
         // update a particular employee details
         public function updateEmployee($data, $id){
             return $this->db->update('employee', $data, ['id' => $id]);
